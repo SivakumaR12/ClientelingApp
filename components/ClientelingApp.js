@@ -34,6 +34,7 @@ export default function ClientelingApp() {
         Roma Clienteling Assistant
       </h1>
 
+      {/* Customer Info Card */}
       <div className="bg-white p-5 rounded-2xl shadow-lg mb-6 border border-gray-200">
         <div className="text-sm text-gray-500 mb-1 flex items-center">
           <User className="w-4 h-4 mr-2 text-gray-400" />
@@ -44,6 +45,7 @@ export default function ClientelingApp() {
           Preferences: {customerProfile.preferences.join(', ')} | Wishlist: {customerProfile.wishlist.join(', ')}
         </div>
 
+        {/* Input and Buttons */}
         <div className="flex gap-2 mt-3">
           <input
             className="border border-gray-300 px-4 py-2 rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow-sm"
@@ -62,6 +64,7 @@ export default function ClientelingApp() {
           </button>
         </div>
 
+        {/* Assistant Response */}
         {response && (
           <div className="mt-4 p-4 bg-gray-100 rounded-lg border text-sm text-gray-700">
             <Sparkles className="w-4 h-4 inline mr-2 text-purple-500" />
@@ -70,6 +73,7 @@ export default function ClientelingApp() {
         )}
       </div>
 
+      {/* Product Suggestions */}
       {products.length > 0 && (
         <div className="space-y-5 mt-6">
           <h2 className="text-lg font-semibold text-gray-800">Matching Products:</h2>
